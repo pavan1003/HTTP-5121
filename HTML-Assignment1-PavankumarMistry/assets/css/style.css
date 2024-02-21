@@ -1,0 +1,283 @@
+/********************************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. IMPORTS
+ * 2. GENERAL STYLES
+ * 3. HEADER
+ * 4. CONTENT LAYOUT
+ * 5. MAIN
+ * 6. SIDEBAR
+ * 7. COMMENTS SECTION
+ * 8. FOOTER
+ ********************************************************************/
+
+/* 1. IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Martian+Mono&family=Montserrat&display=swap');
+
+/* 2. GENERAL STYLES */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #e3fdfd;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0.2em 0;
+  font-family: Garamond, "Hoefler Text", "Times New Roman", Times, serif;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:link {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000000;
+}
+
+a:hover {
+  color: #0B60B0;
+}
+
+a:active {
+  color: #393E46;
+}
+
+/* 3. HEADER */
+#header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  clip-path: ellipse(80% 100% at 50% 0);
+  background-color: #71c9ce;
+  padding: 1em 0;
+}
+
+#header #site-name {
+  font-family: "Honk", system-ui;
+}
+
+#header #main-navigation {
+  margin: 20px 25px;
+  text-align: center;
+}
+
+#header .menu li {
+  font-family: "Martian Mono", monospace;
+  letter-spacing: 1px;
+  display: inline;
+  border-left: 1px solid #000000;
+  line-height: 1.1em;
+  padding: 0 0.8em;
+}
+
+#header .menu li:first-child {
+  border-left: none;
+}
+
+/* 4. CONTENT LAYOUT*/
+.content-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  gap: 1em;
+  padding: 1em;
+  margin: -20px auto;
+  max-width: 1080px;
+  background-color: white;
+}
+
+.content-wrapper>* {
+  padding: 1em 2em;
+}
+
+/* 5. MAIN */
+#main {
+  flex: 2 0 0;
+}
+
+#main .author {
+  color: #666;
+  margin-top: 0;
+}
+
+#main article,
+#main section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#main img {
+  margin: 10px auto;
+  width: 550px;
+  border-radius: 10px;
+}
+
+/* 6. SIDEBAR */
+#sidebar {
+  flex: 1 0 0;
+}
+
+#sidebar .recommend-title {
+  padding: 0;
+}
+
+#sidebar .recommend-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#sidebar .recommend-list .recommend-card a {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid;
+}
+
+#sidebar .recommend-list .recommend-card:last-child a {
+  border-bottom: none;
+}
+
+#sidebar .recommend-list .recommend-name {
+  font-weight: 100;
+  flex: 2 0 100px;
+}
+
+#sidebar .recommend-list .recommend-img {
+  margin: 1em;
+  flex: 1 0 0;
+  width: 100px;
+  height: 60px;
+  max-width: 100px;
+}
+
+/* 7. COMMENTS SECTION */
+#comments-section {
+  margin: 1em 0;
+}
+
+#comments-section fieldset {
+  border-radius: 10px;
+  padding: 1em;
+}
+
+#comments-section .comment-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px 0 0;
+}
+
+#comments-section .comment {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+}
+
+#comments-section .comment p {
+  margin: 0.2em 0;
+  text-align: left;
+}
+
+#comments-section .comment .comment-date {
+  color: #777;
+}
+
+#comments-section .comment .author-and-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#comments-section .comment .comment-text {
+  background-color: #ccc;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+}
+
+#comments-section .comment-form {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#comments-section .comment-form input[type="text"],
+#comments-section .comment-form textarea {
+  font-family: "Montserrat", sans-serif;
+}
+
+#comments-section .comment-form>div {
+  padding-bottom: 0.5em;
+}
+
+#comments-section .blog-rating {
+  display: flex;
+}
+
+#comments-section .blog-rating div {
+  display: flex;
+  margin: 0 5px;
+}
+
+.comment-input,
+.comment-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.comment-submit {
+  display: flex;
+  justify-content: center;
+}
+
+.comment-submit button {
+  background-color: #71c9ce;
+  width: 10em;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.comment-submit button:hover {
+  box-shadow:
+    rgb(166, 227, 233, 0.4) 0px 0px 0px 5px,
+    rgb(166, 227, 233, 0.3) 0px 0px 0px 10px,
+    rgb(166, 227, 233, 0.2) 0px 0px 0px 15px;
+  transition: box-shadow 0.8s ease;
+}
+
+/* 8. FOOTER */
+#footer {
+  display: flex;
+  justify-content: center;
+  background-color: #393e46;
+  color: #eeeeee;
+  padding: 1em;
+  clip-path: ellipse(80% 100% at 50% 100%);
+}
