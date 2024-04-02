@@ -1,0 +1,28 @@
+.shape {
+    width: 100px;
+    height: 90px;
+    background: lightblue;
+    border-radius: 10px;
+    border-top: 10px solid red;
+    margin: 100px;
+}
+
+.rotate-scale {
+    transition: ease-in-out 4s;
+    transform: rotate(1440deg) scale(2);
+}
+
+.clickMeBtn {
+    padding: 10px 20px;
+    margin: 20px 100px;
+    border-radius: 10px;
+    background: lightblue;
+    color: white;
+    transition: background-color 1s, transform 1.5s;
+}
+
+.clickMeBtn:hover {
+    background: lightgreen;
+    color: black;
+    transform: scale(1.2);
+}

@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/*************************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. GENERAL/DEFAULT STYLES
+ * 2. HEADER
+ * -- 2a. Site logo
+ * -- 2b. Navigation
+ * 3. MAIN CONTENT
+ * -- 3a. Hero
+ * -- 3b. Other sections
+ * 4. FOOTER
+ * -- 4a. Navigation
+ * 5. MEDIA QUERIES 
+ * -- 5a. Tablet styles
+ * -- 5b. Menu Breakpoint
+ * -- 5c. Phone styles
+ *************************************************************/
+
+/* 1. GENERAL/DEFAULT STYLES */
+
+:root {
+    --primary-color: #7A00FF;
+    --accent-color: #FFF;
+    --secondary-color: #291C3A;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font: 400 24px/normal "Nunito Sans", sans-serif;
+    margin: 0;
+    background-color: #E1EBED;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 34px;
+    margin: 60px 0;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+input, textarea {
+    margin: 6px 0;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    background: #E1EBED;
+    max-width: 367px;
+    height: 51px;
+}
+
+.content-wrapper {
+    padding: 0 95px 0 96px;
+}
+
+/* 2. HEADER */
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    height: 110px;
+}
+
+#header a {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/* -- 2a. Site logo */
+
+#site-logo img {
+    width: 130px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* -- 2b. Navigation */
+
+#main-navigation a {
+    color: var(--accent-color);
+}
+
+#main-navigation li:hover {
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+
+
+#main-navigation .menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    column-gap: 34px;
+}
+
+#main-navigation .menu-toggle {
+    display: none;
+}
+
+/* 3. MAIN CONTENT */
+/* -- 3a. Hero */
+
+.hero-top {
+    background: url(../images/laptop-background.png) center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 462px;
+}
+
+.hero-top h1 {
+    color: var(--accent-color);
+    text-shadow: 3px 2px 0px #F853CC;
+    font-size: 100px;
+    line-height: 100px;
+    margin: 0 0 55px 0;
+}
+
+.hero-top h2 {
+    font-size: 40px;
+    color: var(--accent-color);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: -0.8px;
+    text-align: left;
+    margin: 0;
+}
+
+.hero-top img {
+    margin: 41px 0;
+    width: 380px;
+    height: 380px;
+}
+
+.hero-bottom {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    min-height: 100px;
+}
+
+.hero-bottom .content-item {
+    flex: 1 0 0;
+    margin: 10px 20px;
+    justify-content: center;
+}
+
+.hero-bottom .text-box {
+    display: flex;
+    align-items: center;
+}
+
+.hero-bottom .text-box span {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 80px;
+    margin-right: 24px;
+}
+
+.hero-bottom .text-box p {
+    font-weight: 300;
+    letter-spacing: -0.48px;
+    width: 110px;
+}
+
+.hero-bottom .social-icons {
+    display: flex;
+    gap: 68px;
+    align-items: center;
+}
+
+.hero-bottom .social-icons a:hover {
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+
+/* -- 3b. Other sections */
+
+#about-me-section p {
+    text-align: justify;
+}
+
+#my-skills-section .skill-set {
+    display: flex;
+    gap: 40px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#my-skills-section .skill-set .skill {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+#my-skills-section .skill-set .skill img {
+    width: 70px;
+    height: 70px;
+}
+
+#my-skills-section .skill-set .skill span {
+    padding: 2.5px 0;
+}
+
+#my-skills-section .skill-set a {
+    color: #000;
+    font-size: 20px;
+}
+
+#contact-section {
+    border-radius: 25px;
+    background: linear-gradient(90deg, rgba(122, 0, 253, 0.15) 0%, rgba(253, 86, 203, 0.15) 100%);
+    box-shadow: 4px 4px 7px 5px rgba(0, 0, 0, 0.25);
+    margin: 0 95px 60px 96px;
+}
+
+#contact-section h2 {
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-content {
+    display: flex;
+    gap: 10px;
+    margin: 0 10px;
+    padding: 0 0 60px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-content .content-item {
+    flex: 1 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-content p {
+    font-size: 48px;
+    max-width: 346px;
+    font-weight: 700;
+}
+
+.contact-content span {
+    color: var(--primary-color);
+}
+
+#contact-form {
+    width: 100%;
+}
+
+.contact-content .contact-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-content textarea {
+    height: 166px;
+    margin-bottom: 0px;
+    resize: none;
+}
+
+.contact-content .contact-submit {
+    display: flex;
+    justify-content: center;
+    max-width: 367px;
+}
+
+.contact-content .contact-submit button {
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    background: #E1EBED;
+    font-size: 24px;
+    color: var(--primary-color);
+    margin: 25px auto 0;
+    max-width: 160px;
+    padding: 6px 35px;
+    cursor: pointer;
+}
+
+/* 4. FOOTER */
+
+#footer {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    color: var(--accent-color);
+    background-color: var(--primary-color);
+}
+
+#footer p {
+    margin: 20px 0;
+}
+
+/* 5. MEDIA QUERIES */
+/* -- 5a. Tablet styles */
+
+@media screen and (max-width:768px) {
+    .content-wrapper {
+        padding: 0 46px;
+    }
+
+    #header {
+        height: 88px;
+    }
+
+    #site-logo img {
+        width: 103px;
+    }
+
+    #main-navigation .menu {
+        column-gap: 31px;
+    }
+
+    .hero-top {
+        background: url(../images/laptop-background-tablet.png) center;
+        flex-flow: row wrap;
+        justify-content: center;
+        height: 100%;
+        align-items: flex-start;
+    }
+
+    .hero-top img {
+        width: 304px;
+        height: 304px;
+    }
+
+    .hero-top div {
+        flex: 1 0 0;
+        flex-basis: 100%;
+    }
+
+    .hero-top h1 {
+        margin: 90px 0 0 0;
+    }
+
+    .hero-bottom .social-icons {
+        gap: 30px;
+        padding-right: 0;
+    }
+
+    .hero-bottom .social-icons img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #my-skills-section .skill-set {
+        gap: 60px;
+    }
+
+    #my-skills-section .skill-set .skill {
+        flex: 1 0 0;
+    }
+
+    #my-skills-section .skill-set .skill img {
+        width: 56px;
+        height: 56px;
+    }
+
+    #my-skills-section .skill-set a {
+        font-size: 16px;
+    }
+
+    #contact-section {
+        margin: 0 46px 60px;
+    }
+
+    .contact-content {
+        margin: 0 19px;
+        flex-flow: row wrap;
+    }
+
+    .contact-content p {
+        font-size: 38px;
+    }
+}
+
+/* -- 5a. Menu Breakpoint */
+
+@media screen and (max-width:720px) {
+    #main-navigation .menu {
+        display: none;
+    }
+
+    #main-navigation .menu-toggle {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        background: none;
+        border: none;
+        height: 20px;
+        width: 20px;
+    }
+
+    #main-navigation .menu {
+        display: flex;
+        align-items: flex-start;
+        margin: 0;
+        padding: 5px 35px;
+        border-radius: 0 0 15px 15px;
+        flex-direction: column;
+        position: absolute;
+        top: 55px;
+        right: 0;
+        background-color: var(--primary-color);
+        max-height: 0;
+        overflow: hidden;
+        transition: all 1s ease-in-out;
+    }
+
+    #main-navigation .menu li a {
+        font-size: 16px;
+    }
+
+    #main-navigation .menu.menu-open {
+        max-height: 400px;
+        transition: all 1s ease-in-out;
+    }
+}
+
+/* -- 5c. Phone styles */
+
+@media screen and (max-width:320px) {
+    #header {
+        height: 70px;
+    }
+
+    h2 {
+        font-size: 30px;
+        margin: 30px 0;
+    }
+
+    body {
+        font-size: 20px;
+    }
+
+    .content-wrapper {
+        padding: 0 37px;
+    }
+
+    #site-logo img {
+        width: 81px;
+    }
+
+    .hero-top {
+        background: url(../images/laptop-background-phone.png) center;
+    }
+
+    .hero-top img {
+        width: 245px;
+        height: 245px;
+    }
+
+    .hero-bottom .text-box span {
+        font-size: 51px;
+        margin-right: 20px;
+    }
+
+    .hero-bottom .text-box p {
+        font-size: 19px;
+        width: 100%;
+    }
+
+    .hero-bottom .social-icons {
+        justify-content: space-between;
+    }
+
+    .hero-bottom .social-icons img {
+        width: 32px;
+        height: 32px;
+    }
+
+    #my-skills-section .skill-set {
+        gap: 10px;
+    }
+
+    #my-skills-section .skill-set .skill {
+        flex-basis: 30%;
+    }
+
+    #my-skills-section .skill-set .skill img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .contact-content p {
+        font-size: 30px;
+    }
+
+    .contact-content .contact-submit button {
+        font-size: 20px;
+        padding: 6px 9px
+    }
+
+    #footer {
+        font-size: 16px;
+    }
+}

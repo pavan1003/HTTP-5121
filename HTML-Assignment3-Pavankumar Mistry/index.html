@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Welcome | Pavan Mistry's Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+  <script async defer src="./assets/js/script.js"></script>
+</head>
+
+<body>
+  <header id="header" class="content-wrapper">
+    <a id="site-logo" href="#">
+      <img src="./assets/images/Logo.svg" alt="Logo of Pavan Mistry's Portfolio Website">
+    </a>
+    <nav id="main-navigation" aria-label="Main navigation">
+      <button class="menu-toggle" onclick="toggleMenu()">
+        <img src="./assets/images/menu-Icon.svg" alt="Toggle menu icon">
+      </button>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about-me-section">About</a></li>
+        <li><a href="#my-skills-section">Skills</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#contact-form">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <div class="hero-top content-wrapper">
+      <div>
+        <h1>Pavan Mistry</h1>
+        <h2>Web Developer</h2>
+      </div>
+      <img src="./assets/images/Pavan-Mistry.png" alt="Pavan Mistry's front facing picture with geometric background.">
+    </div>
+    <div class="hero-bottom content-wrapper">
+      <div class="text-box content-item">
+        <span>1</span>
+        <p>Year of Experience</p>
+      </div>
+      <div class="text-box content-item">
+        <span>3</span>
+        <p>Projects completed</p>
+      </div>
+      <div class="social-icons content-item">
+        <a href="https://github.com/pavan1003" target="_blank">
+          <img src="./assets/images/github.svg" alt="Logo of GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/pavan1003/" target="_blank">
+          <img src="./assets/images/linkedin.svg" alt="Logo of LinkedIn">
+        </a>
+        <a href="mailto:pavan32100@gmail.com">
+          <img src="./assets/images/envelope-regular.svg" alt="Email envelope icon">
+        </a>
+      </div>
+    </div>
+    <section id="about-me-section" class="content-wrapper">
+      <h2>About Me</h2>
+      <p>
+        I am an Enthusiastic student eager to contribute to team success through hard work,
+        attention to detail and excellent organizational skills. Web developer with a strong eye
+        for innovative design and a keen understanding of techniques geared toward optimum user
+        experience.
+      </p>
+    </section>
+    <section id="my-skills-section" class="content-wrapper">
+      <h2>My Skills</h2>
+      <div class="skill-set">
+        <a class="skill" href="https://vuejs.org/" target="_blank">
+          <img src="./assets/images/vuejs-original.svg" alt="Logo of VueJS">
+          <span>VueJS</span>
+        </a>
+        <a class="skill" href="https://www.typescriptlang.org/" target="_blank">
+          <img src="./assets/images/typescript-original.svg" alt="Logo of TypeScript">
+          <span>TypeScript</span>
+        </a>
+        <a class="skill" href="https://www.javascript.com/" target="_blank">
+          <img src="./assets/images/javascript-original.svg" alt="Logo of JavaScript">
+          <span>JavaScript</span>
+        </a>
+        <a class="skill" href="https://react.dev/" target="_blank">
+          <img src="./assets/images/react-originial.svg" alt="Logo of React">
+          <span>React</span>
+        </a>
+        <a class="skill" href="https://nodejs.org/en" target="_blank">
+          <img src="./assets/images/nodejs-original.svg" alt="Logo of NodeJS">
+          <span>NodeJS</span>
+        </a>
+        <a class="skill" href="#">
+          <img src="./assets/images/html5-original.svg" alt="Logo of HTML 5">
+          <span>HTML 5</span>
+        </a>
+        <a class="skill" href="#">
+          <img src="./assets/images/css3-original.svg" alt="Logo of CSS">
+          <span>CSS</span>
+        </a>
+        <a class="skill" href="https://www.python.org/" target="_blank">
+          <img src="./assets/images/python-original.svg" alt="Logo of Python">
+          <span>Python</span>
+        </a>
+        <a class="skill" href="https://tailwindcss.com/" target="_blank">
+          <img src="./assets/images/tailwindcss-icon.svg" alt="Logo of Tailwind">
+          <span>Tailwind</span>
+        </a>
+        <a class="skill" href="https://www.php.net/" target="_blank">
+          <img src="./assets/images/php-original.svg" alt="Logo of PHP">
+          <span>PHP</span>
+        </a>
+      </div>
+    </section>
+    <section id="contact-section">
+      <h2>Contact</h2>
+      <div class="contact-content">
+        <div class="content-item">
+          <p>Lets connect and discuss about some <span>Projects !</span></p>
+        </div>
+        <div class="content-item">
+          <form id="contact-form">
+            <div class="contact-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="contact-field">
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" required>
+            </div>
+            <div class="contact-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="contact-submit">
+              <button type="submit">SUBMIT</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="content-wrapper">
+    <p>© Copyright Pavan Mistry, 2024. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

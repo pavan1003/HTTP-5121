@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+/*************************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. GENERAL/DEFAULT STYLES
+ * 2. HEADER
+ * -- 2a. Site name
+ * -- 2b. Navigation
+ * 3. MAIN CONTENT
+ * -- 3a. Hero
+ * 4. FOOTER
+ *************************************************************/
+
+/* 1. GENERAL/DEFAULT STYLES */
+
+:root {
+    --accent-color: #ad00ff;
+    --secondary-color: #000;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font: normal 500 1.25em "Poppins", sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font: normal 500 1em "Poppins", sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content-wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* 2. HEADER */
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.25);
+    isolation: isolate;
+}
+
+/* -- 2a. Site name */
+
+#site-name {
+    font-size: 1.6em;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 25%);
+    margin: 27px 21px
+}
+
+#site-name a {
+    color: #2B0404;
+}
+
+/* -- 2b. Navigation */
+
+#main-navigation a {
+    color: var(--secondary-color);
+    font-size: 1.2em;
+}
+
+#main-navigation .menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    column-gap: 3.9em;
+    margin: 33px 20px;
+}
+
+/* 3. MAIN CONTENT */
+
+/* -- 3a. Hero */
+
+#main .content-wrapper {
+    height: 638px;
+    display: flex;
+    flex-direction: column;
+    padding: 153px 302px 202px;
+    align-items: center;
+    background: url("../images/macarons-bg.png") center center no-repeat;
+}
+
+#main .content-wrapper h1 {
+    font-size: 3.2em;
+    color: #ffff;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 25%);
+    text-align: center;
+    font-weight: 700;
+}
+
+#main .content-wrapper .hero-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 36px;
+    border: 5px solid var(--accent-color);
+    background: #FFF;
+    width: 226px;
+    height: 63px;
+    margin-top: 28px;
+}
+
+#main .content-wrapper .hero-button a {
+    color: var(--accent-color);
+}
+
+/* 4. FOOTER */
+
+#footer #copyright {
+    font-weight: 300;
+    font-size: 14px;
+    padding: 14px 21px;
+}
